@@ -640,7 +640,6 @@ html.js-on .reveal.in{opacity:1;transform:none}
     <li><a href="#quienes" data-i18n="nl_q">Quiénes somos</a></li>
   </ul>
   <div class="nav-actions">
-   <!-- Replace your existing <div class="lang-switch">…</div> block with this -->
 <div class="lang-switch" role="group" aria-label="Idioma / Language">
   <button type="button" class="lang-btn is-active" data-lang="es" onclick="setLang('es')" title="Español" aria-label="Español">
     <svg class="flag" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
@@ -659,6 +658,10 @@ html.js-on .reveal.in{opacity:1;transform:none}
     </svg>
   </button>
 </div>
+<button class="nav-btn" data-i18n="nl_cta" onclick="document.getElementById('cta').scrollIntoView({behavior:'smooth'})">Contáctenos</button>
+  <button type="button" class="burger" id="burger" aria-label="Abrir menú" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
 </nav>
 
 <!-- Mobile menu -->
