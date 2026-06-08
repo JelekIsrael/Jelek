@@ -584,8 +584,10 @@ html.js-on .reveal.in{opacity:1;transform:none}
   body{font-size:17px;line-height:1.75}
   :root{--nav-h:64px}
   #nav{padding:0 20px}
-  .hero{padding-top:calc(var(--nav-h) + 40px)}
+  .hero{padding-top:calc(var(--nav-h) + 40px);padding-bottom:clamp(104px,24vw,128px)}
   .hero-actions{flex-direction:column;align-items:stretch}
+  .scroll-cue{bottom:18px}
+  .scroll-cue .line{height:24px}
   .btn-gold,.btn-outline{width:100%;padding:17px 24px}
   .hero-ghost{opacity:.04;right:-20%}
   .stats-strip{flex-direction:column}
@@ -615,9 +617,6 @@ html.js-on .reveal.in{opacity:1;transform:none}
   html.js-on .reveal,.reveal{opacity:1;transform:none}
   .hero-logo,.hero-eyebrow,.hero h1,.hero-sub,.hero-actions{opacity:1;transform:none}
   .hero-video{display:none}
-}
-/* Sin video en celulares: evita que el reproductor nativo se muestre en navegadores básicos */
-  .hero-video{display:none!important}
 }
 /* Botón Contáctenos del menú móvil — texto centrado, con aire */
 .mm-cta{padding:20px 70px!important;letter-spacing:.22em!important;text-indent:.22em!important;font-size:15px!important}
@@ -685,9 +684,67 @@ html.js-on .reveal.in{opacity:1;transform:none}
 <div class="lang-switch" role="group" aria-label="Idioma / Language">
   <button type="button" class="lang-btn is-active" data-lang="es" onclick="setLang('es')" title="Español" aria-label="Español">
     <svg class="flag" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <clipPath id="espS"><path d="M6.5 9.0 H10.7 V12.3 C10.7 13.9 9.8 14.8 8.6 15.4 C7.4 14.8 6.5 13.9 6.5 12.3 Z"/></clipPath>
+      </defs>
       <rect width="24" height="24" fill="#FFC400"/>
       <rect width="24" height="6" fill="#C60B1E"/>
       <rect y="18" width="24" height="6" fill="#C60B1E"/>
+      <!-- Columnas de Hércules -->
+      <g stroke="#8a6a1a" stroke-width="0.1">
+        <rect x="5.1" y="9.6" width="0.85" height="5.2" fill="#C99A2E"/>
+        <rect x="11.6" y="9.6" width="0.85" height="5.2" fill="#C99A2E"/>
+        <rect x="4.8" y="14.6" width="1.45" height="0.55" fill="#C99A2E"/>
+        <rect x="11.3" y="14.6" width="1.45" height="0.55" fill="#C99A2E"/>
+        <circle cx="5.52" cy="9.1" r="0.5" fill="#E3B53A"/>
+        <circle cx="12.02" cy="9.1" r="0.5" fill="#E3B53A"/>
+      </g>
+      <!-- Cintas (Plus Ultra) -->
+      <path d="M4.6 11.8 L6.3 12.1 L6.3 12.95 L4.6 12.65 Z" fill="#C60B1E"/>
+      <path d="M11.7 12.1 L13.4 11.8 L13.4 12.65 L11.7 12.95 Z" fill="#C60B1E"/>
+      <!-- Escudo cuartelado -->
+      <g clip-path="url(#espS)">
+        <rect x="6.4" y="8.9" width="4.4" height="6.6" fill="#fff"/>
+        <rect x="6.5" y="9.0" width="2.1" height="2.85" fill="#C60B1E"/>
+        <rect x="7.15" y="9.95" width="0.95" height="0.95" fill="#F1C42C"/>
+        <rect x="7.15" y="9.65" width="0.25" height="0.3" fill="#F1C42C"/>
+        <rect x="7.5" y="9.65" width="0.25" height="0.3" fill="#F1C42C"/>
+        <rect x="7.85" y="9.65" width="0.25" height="0.3" fill="#F1C42C"/>
+        <rect x="7.5" y="10.35" width="0.25" height="0.55" fill="#C60B1E"/>
+        <ellipse cx="9.55" cy="10.65" rx="0.42" ry="0.62" fill="#9B1C31"/>
+        <circle cx="9.55" cy="9.95" r="0.3" fill="#9B1C31"/>
+        <rect x="9.3" y="9.6" width="0.5" height="0.18" fill="#F1C42C"/>
+        <rect x="6.5" y="11.85" width="2.1" height="3.0" fill="#F1C42C"/>
+        <rect x="7.0" y="11.85" width="0.38" height="3.0" fill="#C60B1E"/>
+        <rect x="7.78" y="11.85" width="0.38" height="3.0" fill="#C60B1E"/>
+        <rect x="8.6" y="11.85" width="2.1" height="3.0" fill="#C60B1E"/>
+        <g stroke="#F1C42C" stroke-width="0.2">
+          <line x1="9.65" y1="11.95" x2="9.65" y2="14.0"/>
+          <line x1="8.7" y1="12.95" x2="10.6" y2="12.95"/>
+          <line x1="8.9" y1="12.25" x2="10.4" y2="13.65"/>
+          <line x1="10.4" y1="12.25" x2="8.9" y2="13.65"/>
+        </g>
+        <circle cx="9.65" cy="12.95" r="0.3" fill="#C60B1E" stroke="#F1C42C" stroke-width="0.18"/>
+        <ellipse cx="8.6" cy="14.55" rx="0.62" ry="0.6" fill="#fff"/>
+        <circle cx="8.6" cy="14.6" r="0.34" fill="#2E7D32"/>
+        <ellipse cx="8.6" cy="12.0" rx="0.82" ry="1.0" fill="#2C4A99" stroke="#F1C42C" stroke-width="0.15"/>
+        <circle cx="8.6" cy="11.5" r="0.17" fill="#F1C42C"/>
+        <circle cx="8.3" cy="12.25" r="0.17" fill="#F1C42C"/>
+        <circle cx="8.9" cy="12.25" r="0.17" fill="#F1C42C"/>
+      </g>
+      <path d="M6.5 9.0 H10.7 V12.3 C10.7 13.9 9.8 14.8 8.6 15.4 C7.4 14.8 6.5 13.9 6.5 12.3 Z" fill="none" stroke="#6e561a" stroke-width="0.22"/>
+      <!-- Corona Real -->
+      <g stroke="#9c7a1f" stroke-width="0.08">
+        <path d="M7.0 8.35 L7.25 7.25 L7.85 8.05 L8.25 7.0 L8.6 7.8 L8.95 7.0 L9.35 8.05 L9.95 7.25 L10.2 8.35 Z" fill="#E3B53A"/>
+        <rect x="6.95" y="8.3" width="3.3" height="0.7" rx="0.12" fill="#E3B53A"/>
+      </g>
+      <g fill="#F6E27A">
+        <circle cx="7.25" cy="7.2" r="0.16"/>
+        <circle cx="8.25" cy="6.95" r="0.16"/>
+        <circle cx="8.95" cy="6.95" r="0.16"/>
+        <circle cx="9.95" cy="7.2" r="0.16"/>
+      </g>
+      <circle cx="8.6" cy="6.75" r="0.26" fill="#E3B53A" stroke="#9c7a1f" stroke-width="0.08"/>
     </svg>
   </button>
   <button type="button" class="lang-btn" data-lang="pt" onclick="setLang('pt')" title="Português" aria-label="Português">
@@ -1390,20 +1447,24 @@ html.js-on .reveal.in{opacity:1;transform:none}
 (function(){
   var v1=document.getElementById('heroV1'), v2=document.getElementById('heroV2');
   if(!v1||!v2) return;
-  /* En celulares no se carga el video (el navegador mostraría el reproductor nativo) */
+  /* El video corre de fondo en todos los dispositivos (muted + playsinline, sin reproductor) */
   var vids=[v1,v2];
   vids.forEach(function(v){ v.loop=true; v.muted=true; v.defaultMuted=true; v.playsInline=true; v.setAttribute('muted',''); v.setAttribute('playsinline',''); });
   var SEGMENT=7000, TRANS=2200, B='https://videos.pexels.com/video-files/';
-  var list=[
-    B+'18809689/18809689-uhd_2560_1440_30fps.mp4', /* Tel Aviv · costa y torres (día) */
-    B+'6607871/6607871-uhd_2560_1440_30fps.mp4',   /* Ciudad moderna de noche · rascacielos */
-    B+'12755803/12755803-uhd_2560_1440_24fps.mp4', /* Acre · ciudad vieja */
-    B+'6607821/6607821-uhd_2560_1440_30fps.mp4',   /* Centro urbano de noche */
-    B+'20256360/20256360-uhd_2560_1440_24fps.mp4', /* Jaffa · marina */
-    B+'6846381/6846381-uhd_2560_1440_30fps.mp4',   /* Rascacielos iluminado de noche */
-    B+'20256369/20256369-uhd_2560_1440_24fps.mp4', /* Puerto mediterráneo */
-    B+'10705390/10705390-hd_1920_1080_25fps.mp4'   /* Skyline urbano de noche */
+  /* En móvil servimos 1080p en vez de 1440p: ~mitad de datos, sigue nítido en pantallas de celular */
+  var isMobile = !!(window.matchMedia && window.matchMedia('(max-width:820px),(pointer:coarse)').matches);
+  var Q = isMobile ? 'hd_1920_1080' : 'uhd_2560_1440';
+  var clips = [
+    ['18809689','30fps'], /* Tel Aviv · costa y torres (día) */
+    ['6607871','30fps'],  /* Ciudad moderna de noche · rascacielos */
+    ['12755803','24fps'], /* Acre · ciudad vieja */
+    ['6607821','30fps'],  /* Centro urbano de noche */
+    ['20256360','24fps'], /* Jaffa · marina */
+    ['6846381','30fps'],  /* Rascacielos iluminado de noche */
+    ['20256369','24fps']  /* Puerto mediterráneo */
   ];
+  var list = clips.map(function(c){ return B+c[0]+'/'+c[0]+'-'+Q+'_'+c[1]+'.mp4'; });
+  list.push(B+'10705390/10705390-hd_1920_1080_25fps.mp4'); /* Skyline urbano de noche (siempre HD) */
   function play(v){ var p=v.play(); if(p&&p.catch)p.catch(function(){}); }
   var cur=0, nextClip=1%list.length;
   v1.src=list[0]; try{v1.load();}catch(e){} play(v1);   /* visible: reproduce ya */
@@ -1440,7 +1501,9 @@ html.js-on .reveal.in{opacity:1;transform:none}
     safety=setTimeout(function(){ if(hid.readyState>=3){ cross(); } else { onErr(); } }, 4000);
   }
   /* Jerusalén: descarga directa bloqueada; se prueba en el navegador y se inserta si carga */
-  var jeru=['uhd_3840_2160_30fps','uhd_3840_2160_25fps','uhd_3840_2160_24fps','uhd_2560_1440_30fps','uhd_2560_1440_25fps','uhd_2560_1440_24fps','hd_1920_1080_30fps','hd_1920_1080_25fps','hd_1920_1080_24fps']
+  var jeru=(isMobile
+      ? ['hd_1920_1080_30fps','hd_1920_1080_25fps','hd_1920_1080_24fps']
+      : ['uhd_3840_2160_30fps','uhd_3840_2160_25fps','uhd_3840_2160_24fps','uhd_2560_1440_30fps','uhd_2560_1440_25fps','uhd_2560_1440_24fps','hd_1920_1080_30fps','hd_1920_1080_25fps','hd_1920_1080_24fps'])
     .map(function(q){ return B+'30355706/30355706-'+q+'.mp4'; });
   (function tryJeru(i){
     if(i>=jeru.length) return;
