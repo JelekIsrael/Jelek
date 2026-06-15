@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>https://www.jelek.co/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.jelek.co/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.jelek.co/pt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jelek.co/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jelek.co/"/>
+  </url>
+  <url>
+    <loc>https://www.jelek.co/en/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.jelek.co/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.jelek.co/pt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jelek.co/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jelek.co/"/>
+  </url>
+  <url>
+    <loc>https://www.jelek.co/pt/</loc>
+    <lastmod>2026-06-15</lastmod>
+    <xhtml:link rel="alternate" hreflang="es" href="https://www.jelek.co/"/>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.jelek.co/pt/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.jelek.co/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.jelek.co/"/>
+  </url>
+</urlset>
