@@ -1603,6 +1603,7 @@ body.lgl-open .lgl-panel{transform:none}
   window.setLang=function(lang){
     if(lang!=='es'&&lang!=='pt'&&lang!=='en') lang='es';
     window.JLANG=lang;
+    document.title={es:'JELEK · Inversiones Inmobiliarias en Israel',en:'JELEK · Real Estate Investments in Israel',pt:'JELEK · Investimentos Imobiliários em Israel'}[lang];
     document.documentElement.lang=(lang==='pt'?'pt-BR':(lang==='en'?'en':'es'));
     var DICT=(lang==='pt')?I18N:(lang==='en'?I18N_EN:I18N_ES);
     document.querySelectorAll('[data-i18n]').forEach(function(el){
